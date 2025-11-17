@@ -1,11 +1,17 @@
 
 <template>
     <header>
-        <nav class="container">
+      <nav class="container">
+          <div class="logoContainer">
+            <img src="../../public/logo.svg" class="logo"/>
+            <p>F L O R I U M</p>
+          </div>
+          <div class="actionsContainer">
             <button @click="goToHome" class="link-btn">INÍCIO</button>
             <button @click="goToEditor" class="link-btn">EDITOR</button>
             <button @click="goToTable" class="link-btn">MESAS</button>
             <button @click="goToAbout" class="link-btn">SOBRE</button>
+          </div>
         </nav>
     </header>
 </template>
@@ -36,11 +42,12 @@ const goToAbout = () => {
 <style scoped>
 .container {
     background-color: #0A1828;
-    padding: 1vh;
+    padding: 0vh 10vh 0vh 10vh;
     margin: 1vw 3vw 0vw 3vw;
     border-radius: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     box-shadow: inset 0 4px 6px rgba(252, 252, 252, 0.3); /* sombra interna */
     transition: box-shadow 0.2s ease-in-out;
     outline: none;
@@ -64,4 +71,22 @@ const goToAbout = () => {
     color:#0A1828;
     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
 }
+
+.logo {
+  width: 3vh;
+}
+
+.logoContainer {
+  display: flex;
+}
+
+.logoContainer p {
+  color: #BFA181;
+  font-family: montserrat;
+  font-weight: 500;
+  font-size: 2vh;
+  padding: none;
+  margin-left: 2vh;
+}
+
 </style>
